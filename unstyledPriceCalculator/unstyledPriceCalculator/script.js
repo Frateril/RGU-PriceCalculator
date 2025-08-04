@@ -8,5 +8,4 @@ function calculatePrice() {
     dailyRate = s/365;
     finalPrice = dailyRate * d;
     document.getElementById("finalPrice").innerHTML = finalPrice;
-    console.log(finalPrice)
   }
