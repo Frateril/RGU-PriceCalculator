@@ -6,6 +6,7 @@ function calculatePrice() {
     console.log(d)
     let finalPrice = 0;
     dailyRate = s/365;
-    finalPrice = dailyRate * d;
+    Price = dailyRate * d;
+    finalPrice = Math.round(Price /50) * 50;
     document.getElementById("finalPrice").innerHTML = finalPrice;
   }
