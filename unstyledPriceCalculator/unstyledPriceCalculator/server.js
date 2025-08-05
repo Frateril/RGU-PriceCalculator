@@ -14,3 +14,8 @@ app.get('/api/hello', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
+
+// Middleware 404 : doit être après toutes les autres routes
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+});
